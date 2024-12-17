@@ -6,19 +6,19 @@ public class Fabricante {
     
     public String nombre;
     public Pais pais;
-	public static ArrayList<Fabricante> listadoFabricantes = new ArrayList<>();
+	public static ArrayList<Fabricante> listaFabricantes = new ArrayList<>();
     public int contador;
     
     public Fabricante(String nombre, Pais pais) {
         this.nombre = nombre;
         this.pais = pais;
-        listadoFabricantes.add(this);
+        listaFabricantes.add(this);
     }
     
     public static Fabricante fabricaMayorVentas() {
         int maximo = 0;
         Fabricante fabricante = null;
-        for(Fabricante x : listadoFabricantes){
+        for(Fabricante x : listaFabricantes){
             if(x.getContador() >= maximo){
                 maximo = x.getContador();
                 fabricante = x;
@@ -43,8 +43,8 @@ public class Fabricante {
         this.pais = pais;
     }
 
-    public static ArrayList<Fabricante> getListadoFabricantes() {
-        return listadoFabricantes;
+    public static ArrayList<Fabricante> getListaFabricantes() {
+        return listaFabricantes;
     }
 
     public int getContador() {

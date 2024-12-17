@@ -20,13 +20,13 @@ public class Pais {
     }
     
     public static Pais paisMasVendedor() {
-        ArrayList<Fabricante> listadoFabricantes = Fabricante.getListadoFabricantes();
+        ArrayList<Fabricante> listaFabricantes = Fabricante.getListaFabricantes();
         int maximo = 0;
         Pais paisMaximo = null;
-        for(Fabricante f : listadoFabricantes){
-            if (f.getPais().getContador() >= maximo) { 
-                maximo = f.getPais().getContador();
-                paisMaximo = f.getPais();
+        for(Fabricante x : listaFabricantes){
+            if (x.getPais().getContador() >= maximo) { 
+                maximo = x.getPais().getContador();
+                paisMaximo = x.getPais();
             }
         }
         return paisMaximo;
